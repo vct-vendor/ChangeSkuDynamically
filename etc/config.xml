@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright (c) VCT. All rights reserved
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <vct_changeskudynamically>
+            <general>
+                <sku_selector>.product.attribute.sku .value</sku_selector>
+            </general>
+        </vct_changeskudynamically>
+    </default>
+</config>

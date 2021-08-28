@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright (c) VCT. All rights reserved
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vct" class="vct-tab">
+            <label>VCT</label>
+        </tab>
+
+        <section id="vct_changeskudynamically" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Change SKU Dynamically</label>
+            <tab>vct</tab>
+            <resource>Vct_ChangeSkuDynamically::config</resource>
+
+            <group id="vct_links" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Links</label>
+                <frontend_model>Vct\Main\Block\Adminhtml\System\Config\Links</frontend_model>
+                <attribute type="expanded">1</attribute>
+            </group>
+
+            <group id="general" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="switch_sku" translate="label comment" type="select" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Switch SKU</label>
+                    <comment><![CDATA[<a href="https://vct-vendor.github.io/change-sku-dynamically#switch-sku" target="_blank">Read more</a>]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="sku_selector" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>SKU Selector</label>
+                    <comment><![CDATA[<a href="https://vct-vendor.github.io/change-sku-dynamically#sku-selector" target="_blank">Read more</a>]]></comment>
+                    <depends>
+                        <field id="switch_sku">1</field>
+                    </depends>
+                    <validate>validate-selector</validate>
+                </field>
+            </group>
+
+            <group id="vct_modules" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Other Modules</label>
+                <frontend_model>Vct\Main\Block\Adminhtml\System\Config\Modules</frontend_model>
+                <attribute type="expanded">1</attribute>
+            </group>
+        </section>
+    </system>
+</config>
