@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright (c) VCT. All rights reserved
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vct_ChangeSkuDynamically::menu_item" title="Change SKU Dynamically" module="Vct_ChangeSkuDynamically" parent="Vct_Main::menu" action="admin/system_config/edit/section/vct_changeskudynamically" resource="Magento_Backend::content" />
+    </menu>
+</config>
