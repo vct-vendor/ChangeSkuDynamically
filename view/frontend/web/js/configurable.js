@@ -1,12 +1,7 @@
 /**
  * Copyright (c) VCT. All rights reserved
  */
-define([
-    'jquery',
-    'Vct_ChangeSkuDynamically/js/switcher'
-], function ($, switcher) {
-    'use strict';
-
+define(['jquery', 'Vct_ChangeSkuDynamically/js/switcher'], function ($, switcher) {
     return function (widget) {
         $.widget('mage.configurable', widget, {
             _reloadPrice: function () {

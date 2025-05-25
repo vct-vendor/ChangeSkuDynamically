@@ -1,9 +1,9 @@
 {
     "name": "vct/changeskudynamically",
-    "type": "magento2-module",
-    "version": "2.0.0",
     "description": "VCT Change SKU Dynamically",
-    "license": "OSL-3.0",
+    "license": "proprietary",
+    "type": "magento2-module",
+    "version": "2.0.1",
     "authors": [
         {
             "name": "VCT",
@@ -14,19 +14,21 @@
     ],
     "support": {
         "email": "vct.vendor@gmail.com",
-        "docs": "https://vct-vendor.github.io",
-        "issues": "https://vct-vendor.github.io/faq#issues"
+        "issues": "https://vct-vendor.github.io/faq#issues",
+        "docs": "https://vct-vendor.github.io"
     },
-    "minimum-stability": "stable",
     "require": {
-        "vct/main": "^1.0"
+        "magento/framework": "^103.0",
+        "magento/module-configurable-product": "^100.4",
+        "magento/module-store": "^101.1",
+        "vct/main": "^1.1"
     },
     "autoload": {
-        "files": [
-            "registration.php"
-        ],
         "psr-4": {
             "Vct\\ChangeSkuDynamically\\": ""
-        }
+        },
+        "files": [
+            "registration.php"
+        ]
     }
 }

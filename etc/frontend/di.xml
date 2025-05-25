@@ -6,6 +6,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
-        <plugin name="vct_changeskudynamically_plugin_configurable" type="Vct\ChangeSkuDynamically\Plugin\ConfigurablePlugin" sortOrder="10" />
+        <plugin name="vct_changeskudynamically_plugin_block_product_view_type_configurableplugin" type="Vct\ChangeSkuDynamically\Plugin\Block\Product\View\Type\ConfigurablePlugin" sortOrder="10" />
     </type>
 </config>

@@ -1,7 +1,7 @@
 /**
  * Copyright (c) VCT. All rights reserved
  */
-var config = {
+const config = {
     config: {
         mixins: {
             'mage/validation': {
