@@ -19,23 +19,8 @@ use Magento\Store\Model\ScopeInterface;
  */
 class ConfigurablePlugin
 {
-    public const CONFIG_GENERAL_SKU_SELECTOR = 'vct_changeskudynamically/general/sku_selector';
-    public const CONFIG_GENERAL_SWITCH_SKU = 'vct_changeskudynamically/general/switch_sku';
-
-    /**
-     * @var JsonSerializer
-     */
-    private JsonSerializer $jsonSerializer;
-
-    /**
-     * @var HttpRequest
-     */
-    private HttpRequest $httpRequest;
-
-    /**
-     * @var ScopeConfigInterface
-     */
-    private ScopeConfigInterface $scopeConfig;
+    public const string CONFIG_GENERAL_SKU_SELECTOR = 'vct_changeskudynamically/general/sku_selector';
+    public const string CONFIG_GENERAL_SWITCH_SKU = 'vct_changeskudynamically/general/switch_sku';
 
     /**
      * @param JsonSerializer $jsonSerializer
@@ -43,13 +28,10 @@ class ConfigurablePlugin
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        JsonSerializer $jsonSerializer,
-        HttpRequest $httpRequest,
-        ScopeConfigInterface $scopeConfig
+        private readonly JsonSerializer $jsonSerializer,
+        private readonly HttpRequest $httpRequest,
+        private readonly ScopeConfigInterface $scopeConfig
     ) {
-        $this->jsonSerializer = $jsonSerializer;
-        $this->httpRequest = $httpRequest;
-        $this->scopeConfig = $scopeConfig;
     }
 
     /**
